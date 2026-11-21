@@ -1,0 +1,13 @@
+FROM nginx:alpine
+
+# Copy custom Nginx configuration supporting Cloud Run's dynamic $PORT
+COPY nginx.conf /etc/nginx/templates/default.conf.template
+
+# Copy the CivicResolve web application
+COPY index.html /usr/share/nginx/html/index.html
+
+# Default Cloud Run port
+ENV PORT=8080
+EXPOSE 8080
+
+CMD ["nginx", "-g", "daemon off;"]
