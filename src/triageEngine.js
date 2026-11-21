@@ -10,7 +10,7 @@ const RULES = [
     priorityRank: 1,
     slaHours: 2,
     confidence: '98.4%',
-    pattern: /spark|fire|electric|wire|transformer|power|shock|blackout|बिजली|करंट|విద్యుత్|corriente/i,
+    pattern: /\b(spark|sparking|fire|electric|electrical|wire|transformer|power|shock|blackout)\b|बिजली|करंट|విద్యుత్|corriente/i,
     action: 'Dispatch Rapid Response Electrical Squad; isolate feeder line and cordon hazard zone.'
   },
   {
@@ -19,7 +19,7 @@ const RULES = [
     priorityRank: 2,
     slaHours: 6,
     confidence: '96.1%',
-    pattern: /water|pipe|leak|flood|sewage|drain|burst|overflow|पानी|सीवर|నీరు|agua/i,
+    pattern: /\b(water|pipe|pipeline|leak|leaking|flood|flooding|sewage|drain|burst|waterlogging)\b|पानी|सीवर|నీరు|agua/i,
     action: 'Assign Hydraulic Maintenance Team; isolate zonal valve and deploy dewatering pump.'
   },
   {
@@ -28,7 +28,7 @@ const RULES = [
     priorityRank: 2,
     slaHours: 12,
     confidence: '94.7%',
-    pattern: /pothole|road|bridge|traffic|footpath|asphalt|accident|crater|गड्ढा|सड़क|రోడ్డు|bache/i,
+    pattern: /\b(pothole|road|bridge|traffic|footpath|asphalt|accident|crater)\b|गड्ढा|सड़क|రోడ్డు|bache/i,
     action: 'Place reflective safety barricades and schedule cold-mix asphalt patching crew.'
   },
   {
@@ -37,7 +37,7 @@ const RULES = [
     priorityRank: 3,
     slaHours: 24,
     confidence: '95.2%',
-    pattern: /garbage|trash|waste|smell|dump|mosquito|sanitation|bin|कचरा|గార్బేజ్|basura/i,
+    pattern: /\b(garbage|trash|waste|smell|dump|mosquito|sanitation|bin|compactor)\b|कचरा|గార్బేజ్|basura/i,
     action: 'Dispatch Zone Sanitation Tipper Vehicle and apply bio-disinfectant spray.'
   }
 ];
