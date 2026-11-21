@@ -1,0 +1,10 @@
+FROM nginx:alpine
+
+COPY nginx.conf /etc/nginx/templates/default.conf.template
+COPY index.html /usr/share/nginx/html/index.html
+COPY src/ /usr/share/nginx/html/src/
+
+ENV PORT=8080
+EXPOSE 8080
+
+CMD ["nginx", "-g", "daemon off;"]

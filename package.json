@@ -1,0 +1,17 @@
+{
+  "name": "civic-resolve",
+  "version": "2.5.0",
+  "description": "AI-Powered Citizen Grievance Management and Resolution Platform",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "civic-tech",
+    "ai-triage",
+    "grievance-management",
+    "smart-city"
+  ],
+  "license": "MIT"
+}
